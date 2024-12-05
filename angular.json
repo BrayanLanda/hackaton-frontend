@@ -27,6 +27,11 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+
+              "node_modules/bootswatch/dist/united/bootstrap.min.css",
+              "node_modules/ngx-spinner/animations/line-scale-party.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -97,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ed118859-6382-42a5-837c-d07910b5b530"
   }
 }
