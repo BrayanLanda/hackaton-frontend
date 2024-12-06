@@ -1,7 +1,6 @@
 import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
 import { provideServerRendering } from '@angular/platform-server';
 import { appConfig } from './app.config';
-import { UserService } from './services/user.service';
 
 const serverConfig: ApplicationConfig = {
   providers: [

@@ -1,0 +1,18 @@
+<div class="d-flex">
+    <!-- Sidebar -->
+    <nav class="bg-light border-end" id="sidebar" style="width: 250px; height: 100vh;">
+        <ul class="list-group list-group-flush">
+            @for (item of sidebarItems; track $index) {
+            <li class="list-group-item d-flex align-items-center">
+                <i class="{{ item.icon }} me-3"></i>
+                <a [routerLink]="item.url" class="text-decoration-none">{{ item.label }}</a>
+            </li>
+            }
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="flex-grow-1 p-3">
+        <router-outlet />
+    </div>
+</div>

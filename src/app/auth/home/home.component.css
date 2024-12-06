@@ -1,0 +1,57 @@
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2020/01/30/21/24/shop-4806610_1280.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: aliceblue;
+}
+
+.hero-content p {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.cta-buttons .btn {
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #ffecee;
+    border-color: #bd2130;
+    color: #bd2130;
+  }
+  
