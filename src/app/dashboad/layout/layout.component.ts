@@ -10,8 +10,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export default class LayoutComponent {
   public sidebarItems = [
-    { label: 'Products', icon: 'fa fa-box', url: './products' },
-    { label: 'Profile', icon: 'fa fa-user', url: './profile' },
-    { label: 'Search', icon: 'fa fa-search', url: './search' }
+    { label: 'Productos', icon: 'fa fa-box', url: './products' },
+    { label: 'Perfil', icon: 'fa fa-user', url: './profile' },
+    { label: 'Favoritos', icon: 'fa fa-star', url: './search' },
+    { label: 'Compras', icon: 'fa fa-store', url: './search' },
+    { label: 'Buscar', icon: 'fa fa-search', url: './search' }
   ]
 }
