@@ -1,12 +1,27 @@
 #sidebar {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.list-group-item {
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.list-group-item:hover {
-    background-color: #f8f9fa;
-}
+    background-color: #f8f9fa; /* Color de fondo más suave */
+    border-right: 1px solid #ddd; /* Línea sutil de separación */
+  }
+  
+  #sidebar img {
+    border: 2px solid #007bff; /* Borde de imagen color azul */
+  }
+  
+  .list-group-item {
+    transition: background-color 0.3s ease;
+  }
+  
+  .list-group-item:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el mouse */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Color de fondo del botón */
+    border-color: #dc3545; /* Borde del botón */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Color de fondo al pasar el mouse */
+    border-color: #c82333; /* Borde al pasar el mouse */
+  }
+  
