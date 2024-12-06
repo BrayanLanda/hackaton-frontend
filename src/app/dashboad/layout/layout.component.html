@@ -1,6 +1,10 @@
 <div class="d-flex">
     <!-- Sidebar -->
-    <nav class="bg-light border-end" id="sidebar" style="width: 250px; height: 100vh;">
+    <nav class="bg-light border-end d-flex flex-column" id="sidebar" style="width: 250px; height: 100vh; position: fixed;">
+        <div class="p-3 text-center border-bottom">
+            <img src="https://cdn.pixabay.com/photo/2021/02/27/16/25/woman-6055084_1280.jpg" alt="User Avatar" class="rounded-circle mb-2" width="80" height="80">
+            <h6 class="m-0">Invitado</h6>
+        </div>
         <ul class="list-group list-group-flush">
             @for (item of sidebarItems; track $index) {
             <li class="list-group-item d-flex align-items-center">
@@ -9,10 +13,45 @@
             </li>
             }
         </ul>
+        <div class="p-3 border-top mt-auto">
+            <button routerLink="/" class="btn btn-danger w-100">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                Logout
+            </button>
+        </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="flex-grow-1 p-3">
+    <div class="flex-grow-1 p-3" style="margin-left: 250px;">
         <router-outlet />
     </div>
 </div>
+
+
+<!-- <div class="d-flex">
+
+    <nav class="bg-light border-end d-flex flex-column" id="sidebar" style="width: 250px; height: 100vh; position: fixed">
+        <div class="p-3 text-center border-bottom">
+            <img src="https://cdn.pixabay.com/photo/2021/02/27/16/25/woman-6055084_1280.jpg" alt="User Avatar" class="rounded-circle mb-2" width="80" height="80">
+            <h6 class="m-0">Invitado</h6>
+          </div>
+        <ul class="list-group list-group-flush">
+            @for (item of sidebarItems; track $index) {
+            <li class="list-group-item d-flex align-items-center">
+                <i class="{{ item.icon }} me-3"></i>
+                <a [routerLink]="item.url" class="text-decoration-none">{{ item.label }}</a>
+            </li>
+            }
+        </ul>
+        <div class="p-3 border-top mt-auto">
+            <button routerLink="/" class="btn btn-danger w-100">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <div class="flex-grow-1 p-3">
+        <router-outlet />
+    </div>
+</div> -->

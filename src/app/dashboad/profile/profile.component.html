@@ -1,1 +1,37 @@
-<p>profile works!</p>
+<!-- Perfil Content -->
+<div class="container mt-4">
+    <h2>Perfil</h2>
+    <p>Actualiza tu información:</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateProfileModal">
+      Actualizar Información
+    </button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="updateProfileModalLabel">Actualizar Perfil</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="username" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="username" placeholder="Ingresa tu nombre de usuario">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingresa tu contraseña">
+              </div>
+              <button type="submit" class="btn btn-success w-100">Guardar cambios</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
