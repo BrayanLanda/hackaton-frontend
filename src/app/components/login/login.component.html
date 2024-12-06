@@ -7,7 +7,7 @@
             <a routerLink="">Inicio</a>
         </div>
 
-        <form class="login-form" id="login-form" #loginForm="ngForm" novalidate>
+        <form class="login-form" id="login-form" #loginForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
             <h1>Iniciar Sesión</h1>
 
             <div class="form-group">
@@ -20,7 +20,7 @@
                     placeholder="Ingresa tu correo" 
                     required
                     email
-                    ngModel
+                    [(ngModel)]="credentials.email"
                     #email="ngModel"
                 >
                 <!--div de validaciones Alerts-->
@@ -39,7 +39,7 @@
                     class="form-control"
                     placeholder="Ingresa tu contraseña" 
                     required
-                    ngModel
+                    [(ngModel)]="credentials.password"
                     #userPassword="ngModel"
                 >
                 <!--div de validaciones Alerts-->
