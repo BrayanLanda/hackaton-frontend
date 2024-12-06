@@ -1,46 +1,78 @@
-.picsum-img-wrapper img {
-    width: 100%;
-    /* Ajusta la imagen al ancho del contenedor */
-    height: auto;
-    /* Mantén la proporción de la imagen */
-    object-fit: cover;
-    /* Asegura que la imagen se recorte adecuadamente */
-}
-
-ngb-carousel {
-    height: 80vh;
-    /* Ajusta este valor según tus necesidades */
-    overflow: hidden;
-    /* Evita que el contenido desborde */
-}
-
-.carousel-caption h3 {
-    font-size: 2rem;
-    /* Aumenta el tamaño de la fuente */
-    font-weight: bold;
-    color: #ff5733;
-    /* Color llamativo */
-}
-
-.carousel-caption p {
-    font-size: 1.2rem;
-    /* Aumenta el tamaño del texto */
-    color: #fafafa;
-    /* Color de texto más oscuro */
-    font-style: italic;
-}
-
 .search-section form {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto; /* Centra el formulario */
+}
+
+.picsum-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .search-section input {
     border-radius: 20px;
-    /* Bordes redondeados */
+    padding: 10px;
 }
 
 .search-section button {
     border-radius: 20px;
-    /* Bordes redondeados */
+    padding: 10px 20px; /* Aumenta el tamaño del botón */
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+}
+
+.picsum-img-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center; /* Asegura que la imagen se mantenga centrada */
+}
+
+ngb-carousel {
+    width: 100%;
+    max-height: 80vh; /* Ajusta este valor según tus necesidades */
+    overflow: hidden; /* Asegúrate de que este valor no cause problemas */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%; /* Centra el texto verticalmente */
+    left: 50%; /* Centra el texto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición del texto */
+    color: #ffffff; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff5733;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    color: #fafafa;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .carousel-caption h3 {
+        font-size: 3rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-caption h3 {
+        font-size: 3rem; /* Ajusta el tamaño de la fuente para pantallas grandes */
+    }
+
+    .carousel-caption p {
+        font-size: 1.5rem;
+    }
 }
