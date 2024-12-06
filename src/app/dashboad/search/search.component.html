@@ -1,4 +1,11 @@
-<ngb-carousel>
+<div class="search-section mb-4">
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+      <button class="btn btn-outline-success btn-lg" type="submit">Buscar</button>
+    </form>
+  </div>
+  
+  <ngb-carousel>
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper d-flex justify-content-center">
         <img [src]="images[0]" alt="Random first slide" class="img-fluid" />
@@ -28,9 +35,3 @@
     </ng-template>
   </ngb-carousel>
   
-  <div class="search-section mb-4">
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Buscar</button>
-    </form>
-  </div>
