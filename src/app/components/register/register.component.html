@@ -24,7 +24,7 @@
                         required
                         minlength="2" 
                         maxlength="150" 
-                        ngModel
+                        [(ngModel)]="user.first_name"
                         #firstName="ngModel"
                     >
                     <!--div de validaciones Alerts-->
@@ -47,7 +47,7 @@
                         required
                         minlength="2" 
                         maxlength="150" 
-                        ngModel
+                        [(ngModel)]="user.last_name"
                         #lastName="ngModel"
                     >
                     <!--div de validaciones Alerts-->
@@ -73,7 +73,7 @@
                         required
                         minlength="5" 
                         maxlength="150" 
-                        ngModel
+                        [(ngModel)]="user.address"
                         #address="ngModel"
                     >
                     <!--div de validaciones Alerts-->
@@ -96,7 +96,7 @@
                         required
                         minlength="5" 
                         maxlength="150" 
-                        ngModel
+                        [(ngModel)]="user.city"
                         #city="ngModel"
                     >
                     <!--div de validaciones Alerts-->
@@ -121,7 +121,7 @@
                         placeholder="Ingresa tu móvil" 
                         required
                         pattern ="^[0-9]{10}"
-                        ngModel
+                        [(ngModel)]="user.mobile"
                         #mobile="ngModel"
                     >
                     <!--div de validaciones Alerts-->
@@ -140,7 +140,7 @@
                         name="birthDate" 
                         class="form-control"
                         required
-                        ngModel
+                        [(ngModel)]="user.birth_date"
                         #birthDate="ngModel"
                     >
                     <!--div de validaciones Alerts-->
@@ -162,7 +162,7 @@
                     placeholder="Ingresa tu correo electrónico" 
                     required
                     email
-                    ngModel
+                    [(ngModel)]="user.email"
                     #email="ngModel"
                 >
                 <!--div de validaciones Alerts-->
@@ -182,7 +182,7 @@
                     class="form-control" 
                     placeholder="Ingresa tu contraseña" 
                     required
-                    ngModel
+                    [(ngModel)]="user.password"
                     #userPassword="ngModel"
                 >
                 <!--div de validaciones Alerts-->

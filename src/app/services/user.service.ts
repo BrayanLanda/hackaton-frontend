@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -37,9 +37,10 @@ export class UserService {
 
   // Método para crear: User
   createUser(user: CreateUser): Observable<CreateUser> {
-    return this.http.post<CreateUser>(this.apiUrl, user)
+    const headers = new HttpHeaders({'Content-Type': 'application/json'})
+    return this.http.post<CreateUser>(this.apiUrl, user, { headers });
   }
-  
+
 }
 
 
