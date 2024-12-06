@@ -1,0 +1,88 @@
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* Espacio entre las tarjetas */
+  flex-wrap: wrap;
+  /* Permite que las tarjetas se ajusten a la pantalla si es necesario */
+  padding: 20px;
+}
+
+.card {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-container img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.info {
+  padding: 5px 15px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.brand,
+.reference {
+  font-size: 0.9rem;
+  color: #555555;
+  margin: 1px 0;
+}
+
+/* Estilo para las dos columnas */
+.info div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.size,
+.stock,
+.price {
+  font-size: 0.9rem;
+  color: #555555;
+  margin: 0;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e67e22;
+  margin-left: 15px;
+}
+
+/* Botón estilizado */
+.buy-btn {
+  padding: 5px 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: rgb(148, 145, 145);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #d35400;
+  transform: translateY(-3px);
+}
