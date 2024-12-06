@@ -1,20 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { Users, UserService } from '../../services/user.service';
+import { AuthService } from '../../services/auth.service';
+import { Users } from '../../models/user';
 
 
 @Component({
   selector: 'app-register',
   standalone: true,
   imports: [FormsModule, CommonModule, RouterOutlet, RouterModule, HttpClientModule],
-  providers:[UserService],
+  providers:[],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
 })
 export class RegisterComponent {
+  private authService = inject(AuthService);
 
   errorMessage: string = '';
 
@@ -31,7 +33,7 @@ export class RegisterComponent {
     registration_date: ""
   }
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: AuthService, private router: Router) { }
 
   // Maneja el envío del formulario para crear un nuevo usuario
   onSubmit(): void {
@@ -51,7 +53,7 @@ export class RegisterComponent {
     console.log('Payload a enviar:', payload);
 
     // Llamar al servicio para enviar los datos del nuevo usuario
-    this.userService.createUser(payload).subscribe({
+    this.authService.register(payload).subscribe({
       // Manejo de la respuesta exitosa del servicio
       next: (result) => {
         console.log('Usuario creado con éxito:', result);
